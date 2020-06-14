@@ -1,0 +1,10 @@
+.chartContainer {
+  border-top: 5px solid orangered;
+  border-bottom: 5px solid orangered;
+}
+.chartContainer canvas {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 1080px !important;
+  height: 400px !important;
+}

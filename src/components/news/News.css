@@ -1,0 +1,134 @@
+.container {
+  width: 1280px;
+  margin: 20px auto;
+}
+table {
+  /* width: 1080px; */
+  border-collapse: collapse;
+  margin: 20px 0px;
+}
+thead,
+tbody {
+  display: block;
+}
+tbody {
+  height: 400px;
+  overflow-y: auto;
+}
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: orangered;
+  color: white;
+  font-weight: bold;
+  width: 70px;
+}
+
+td,
+th {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 16px;
+  min-width: 80px;
+}
+
+th:nth-child(4) {
+  width: 1020px;
+}
+td:nth-child(3) span {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+span {
+  margin: 0 5px;
+  font-size: 14px;
+}
+.link,
+.author,
+.time {
+  color: grey;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link,
+.hide {
+  cursor: pointer;
+}
+.hide:hover {
+  text-decoration: underline;
+}
+.navigation {
+  float: right;
+  color: orangered;
+}
+.navigation p {
+  display: inline-block;
+  cursor: pointer;
+}
+.navigation p:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 994px),
+  (min-device-width: 768px) and (max-device-width: 994px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 30%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 15%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  td:nth-of-type(1):before {
+    content: "Comments";
+  }
+  td:nth-of-type(2):before {
+    content: "Vote Count";
+  }
+  td:nth-of-type(3):before {
+    content: "UpVote";
+  }
+  td:nth-of-type(4):before {
+    content: "News Details";
+  }
+  tbody td,
+  thead th {
+    clear: both;
+  }
+}
