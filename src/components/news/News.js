@@ -268,7 +268,7 @@ class News extends Component {
               ))
             ) : (
               <tr>
-                <td>Loading Data...</td>
+                <td>Loading News Data...</td>
               </tr>
             )}
           </tbody>
