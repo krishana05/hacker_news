@@ -20,7 +20,7 @@ class News extends Component {
     this.loadData(this.pageIndex);
   }
   loadData(index) {
-    fetch("http://hn.algolia.com/api/v1/search?page=" + index)
+    fetch("https://hn.algolia.com/api/v1/search?page=" + index)
       .then((res) => res.json())
       .then(
         (result) => {
