@@ -34,7 +34,7 @@ class News extends Component {
           res = this.loadDataForUpvote();
           // console.log(res);
           this.setState({ res });
-          console.log(this.state.res);
+          // console.log(this.state.res);
           this.sortByupVote(this.state.res);
         },
         (error) => {
@@ -119,11 +119,13 @@ class News extends Component {
     return message + " ago";
   }
   hideNews(id) {
-    console.log(id);
+    // console.log(id);
     this.hiddenData = localStorage.getItem("hiddenData")?.split(",");
+    if (this.hiddenData === undefined) this.hiddenData = [];
     this.hiddenData.push(id);
     localStorage.setItem("hiddenData", this.hiddenData);
-    this.updateState(this.state);
+    let res = this.updateStateForHidden(this.state);
+    this.setState({ res });
   }
   upVote(id, points) {
     // console.log(id, points);
